@@ -11,14 +11,13 @@ public class Delete {
 		Scanner sc=new Scanner(System.in);
 		System.out.println("Enter the position of element to delete:");
 		int d=sc.nextInt();
-		for(int i=0;i<d-1;i++) //d=4;
+		int j=0;
+		for(int i=0;i<arr1.length;i++) //d=4;
 		{
-			arr1[i]=arr[i];
+			if(i!=d)
+			arr1[i]=arr[j++];
 		}
 
-		for(int i=d-1;i<arr1.length;i++) {
-			arr1[i]=arr[i+1];
-		}
 		System.out.println();
 		
 		for(int i=0;i<arr1.length;i++) {
